@@ -13,11 +13,11 @@ let availableQuestions = []
 let timeValue = 15;
 let questions = [
   {
-    question: 'asADF',
-    choice1: '2',
-    choice2: '4',
-    choice3: '21',
-    choice4: '17',
+    question: "How do you make an 'if' statement in JavaScript?",
+    choice1: 'maybe (condition)',
+    choice2: 'if (condition){code  }',
+    choice3: 'what if (condtion)',
+    choice4: 'It (conditon)',
     answer: 2,
   },
   {
@@ -30,24 +30,75 @@ let questions = [
     answer: 1,
   },
   {
-    question: "What percent of American adults believe that chocolate milk comes from brown cows?",
-    choice1: "20%",
-    choice2: "18%",
-    choice3: "7%",
-    choice4: "33%",
+    question: "Which of the following is an example of the else statement?",
+    choice1: "else if(do the thing)",
+    choice2: "else(play)",
+    choice3: "if (hour < 18) { greeting = 'Good day';} else { greeting = 'Good evening';}",
+    choice4: "maybe else( chess)",
     answer: 3,
   },
   {
-    question: "Approximately what percent of U.S. power outages are caused by squirrels?",
-    choice1: "10-20%",
-    choice2: "5-10%",
-    choice3: "15-20%",
-    choice4: "30%-40%",
+    question: "What does JS stand for?",
+    choice1: "Just stand",
+    choice2: "Just stuff",
+    choice3: "Job Stuff",
+    choice4: "JavaScript",
+    answer: 4,
+  },
+  {
+    question: "How do you make an 'else if' statement in JavaScript?",
+    choice1: 'maybe else(condition)',
+    choice2: 'ifelse (condition){code  }',
+    choice3: 'if (time < 10) {greeting = "Good morning";} else if (time < 20) {greeting = "Good day";} else { greeting = "Good evening";}',
+    choice4: 'It if else(conditon)',
+    answer: 3,
+  },
+  {
+    question:
+      "Which is the code to return the value of x rounded up to its nearest integer?",
+    choice1: "Math.ceil(4.9);",
+    choice2: ".round",
+    choice3: "please round.HTML",
+    choice4: "None of the above",
     answer: 1,
-  }
+  },
+  {
+    question: "Which of the following is the code to return the value of x rounded down to to its nearest integer?",
+    choice1: "else round down(do the thing)",
+    choice2: "Math.floor(4.9);",
+    choice3: "if (hour < 18) { greeting = 'Good day';} else { greeting = 'Good evening';}",
+    choice4: "pls round down( chess)",
+    answer: 2,
+  },
+  {
+    question: "Which statement tells the browser to write Hello Dolly inside an HTML element with id, demo",
+    choice1: "write= 'Hello Dolly';",
+    choice2: "Print ='Hello Dolly';",
+    choice3: "None of the other answers",
+    choice4: "document.getElementById('demo').innerHTML = 'Hello Dolly.'';",
+    answer: 4,
+  },
+   {
+    question: "Which of the following is an example of how you do a single line comment in JavaScript?",
+    choice1: "//comment",
+    choice2: "{{comment",
+    choice3: "?||\comment",
+    choice4: "/\/\/\comment",
+    answer: 1,
+  },
+  {
+    question: "Which of the following is an example of how you do a multi line comment?",
+    choice1: "// comment \\",
+    choice2: "--comment--",
+    choice3: "/* comments */",
+    choice4: "All of the other answers",
+    answer: 3,
+  },
+
+  
 ]
 
-const SCORE_POINTS = 100
+const SCORE_POINTS = 10
 const MAX_QUESTIONS = 10
 
 startGame = () => {
@@ -110,7 +161,7 @@ choices.forEach(choice => {
 
 incrementScore = num => {
   score += num
-  scoreText.innerText = score
+  scoreText.innerText = score + "%"
 }
 
 startGame()
